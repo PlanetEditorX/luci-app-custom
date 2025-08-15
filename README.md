@@ -20,6 +20,7 @@ Create index file './feeds/custom.index'
 3. 安装
 ```bash
 ./scripts/feeds install luci-app-keepalived-ha
+./scripts/feeds install -a
 ```
 成功输出
 ```bash
@@ -30,3 +31,6 @@ Installing package 'luci-app-keepalived-ha' from custom
 ```bash
 make package/luci-app-keepalived-ha/compile V=s
 ```
+
+
+CONFIG_PACKAGE_luci-app-keepalived-ha=y
