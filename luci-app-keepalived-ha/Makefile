@@ -1,21 +1,18 @@
-include $(TOPDIR)/feeds/luci.mk
+include $(TOPDIR)/include/package.mk
 
 PKG_NAME:=luci-app-keepalived-ha
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
-
-LUCI_TITLE:=LuCI Support for Keepalived HA
-LUCI_DEPENDS:=+keepalived +nftables +luci-base
-LUCI_LICENSE:=MIT
-LUCI_MAINTAINER:=PlanetEditorX
+PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
+PKG_BUILD_TYPE:=none
 
 define Package/$(PKG_NAME)
   SECTION:=luci
   CATEGORY:=LuCI
   SUBMENU:=3. Applications
-  TITLE:=$(LUCI_TITLE)
-  MAINTAINER:=$(LUCI_MAINTAINER)
-  DEPENDS:=$(LUCI_DEPENDS)
+  TITLE:=LuCI Support for Keepalived HA
+  MAINTAINER:=PlanetEditorX
+  DEPENDS:=+keepalived +nftables +luci-base
 endef
 
 define Package/$(PKG_NAME)/install
