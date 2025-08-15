@@ -1,11 +1,14 @@
 PKG_NAME:=luci-app-keepalived-ha
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
+
+# 使用 none 类型，并确保没有源代码需要下载
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
+PKG_BUILD_TYPE:=none
 
 include $(TOPDIR)/include/package.mk
 
-# 明确定义所有构建阶段为空，以强制跳过任何编译尝试
+# 明确定义空的构建阶段，以防止任何编译推断
 define Build/Prepare
 endef
 
