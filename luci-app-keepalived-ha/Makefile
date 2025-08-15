@@ -1,10 +1,10 @@
-include $(TOPDIR)/include/package.mk
-
 PKG_NAME:=luci-app-keepalived-ha
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 PKG_BUILD_TYPE:=none
+
+include $(TOPDIR)/include/package.mk
 
 define Package/$(PKG_NAME)
   SECTION:=luci
