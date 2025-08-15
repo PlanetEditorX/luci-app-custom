@@ -1,22 +1,35 @@
 include $(TOPDIR)/include/package.mk
 
+PKG_NAME:=luci-app-keepalived-ha
+PKG_VERSION:=1.0.0
+PKG_RELEASE:=1
+PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
+
 LUCI_TITLE:=LuCI Support for Keepalived HA
 LUCI_DEPENDS:=+keepalived +nftables +luci-base
-LUCI_PKGARCH:=all
 LUCI_LICENSE:=MIT
 LUCI_MAINTAINER:=PlanetEditorX
 
-define Package/luci-app-keepalived-ha
+define Package/$(PKG_NAME)
     SECTION:=luci
     CATEGORY:=LuCI
     SUBMENU:=3. Applications
     TITLE:=$(LUCI_TITLE)
     MAINTAINER:=$(LUCI_MAINTAINER)
     DEPENDS:=$(LUCI_DEPENDS)
-	VERSION:=1.0.0
+    VERSION:=$(PKG_VERSION)
 endef
 
-define Package/luci-app-keepalived-ha/install
+define Build/Prepare
+endef
+
+define Build/Configure
+endef
+
+define Build/Compile
+endef
+
+define Package/$(PKG_NAME)/install
     $(INSTALL_DIR) $(1)/etc/config
     $(INSTALL_CONF) files/etc/config/keepalived_ha $(1)/etc/config/keepalived_ha
 
@@ -33,4 +46,4 @@ define Package/luci-app-keepalived-ha/install
     $(INSTALL_DATA) luasrc/view/keepalived_ha/log.htm $(1)/usr/lib/lua/luci/view/keepalived_ha/
 endef
 
-$(eval $(call BuildPackage,luci-app-keepalived-ha))
+$(eval $(call BuildPackage,$(PKG_NAME)))
