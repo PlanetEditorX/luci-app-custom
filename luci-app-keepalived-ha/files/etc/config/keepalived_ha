@@ -1,0 +1,5 @@
+config keepalived_ha 'config'
+    option role 'main'
+    option vip '192.168.1.5'
+    option interface 'br-lan'
+    option peer_ip '192.168.1.3'

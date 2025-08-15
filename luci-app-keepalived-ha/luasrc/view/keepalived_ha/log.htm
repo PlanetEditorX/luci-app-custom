@@ -1,0 +1,4 @@
+<%+header%>
+<h2>Keepalived Watchdog 日志</h2>
+<pre><%=luci.sys.exec("tail -n 50 /tmp/failover_watchdog.log")%></pre>
+<%+footer%>
