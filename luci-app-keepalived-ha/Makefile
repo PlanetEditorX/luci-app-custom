@@ -13,6 +13,7 @@ define Package/$(PKG_NAME)
   TITLE:=LuCI Support for Keepalived HA
   MAINTAINER:=PlanetEditorX
   DEPENDS:=+keepalived +nftables +luci-base
+  VERSION:=$(PKG_VERSION)
 endef
 
 define Package/$(PKG_NAME)/install
