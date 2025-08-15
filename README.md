@@ -10,6 +10,12 @@ src-git custom https://github.com/PlanetEditorX/luci-app-custom.git;main
 ```bash
 ./scripts/feeds update custom
 ```
+输出
+```bash
+Updating feed 'custom' from 'https://github.com/PlanetEditorX/luci-app-custom.git;main' ...
+Already up to date.
+Create index file './feeds/custom.index'
+```
 
 3. 安装
 ```bash

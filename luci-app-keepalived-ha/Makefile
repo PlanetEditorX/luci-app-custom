@@ -5,7 +5,13 @@ PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
 include $(TOPDIR)/include/package.mk
 
-# Add this empty Build/Compile block to explicitly skip compilation
+# 明确定义所有构建阶段为空，以强制跳过任何编译尝试
+define Build/Prepare
+endef
+
+define Build/Configure
+endef
+
 define Build/Compile
 endef
 
