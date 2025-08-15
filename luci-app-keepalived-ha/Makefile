@@ -2,7 +2,6 @@ PKG_NAME:=luci-app-keepalived-ha
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
-# 删除或注释掉 PKG_BUILD_TYPE:=none
 
 include $(TOPDIR)/include/package.mk
 
