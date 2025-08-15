@@ -19,3 +19,8 @@ src-git custom https://github.com/PlanetEditorX/luci-app-custom.git;main
 ```bash
 Installing package 'luci-app-keepalived-ha' from custom
 ```
+
+4. 编译
+```bash
+make package/luci-app-keepalived-ha/compile V=s
+```

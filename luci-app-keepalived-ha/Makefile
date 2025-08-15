@@ -5,6 +5,10 @@ PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
 include $(TOPDIR)/include/package.mk
 
+# Add this empty Build/Compile block to explicitly skip compilation
+define Build/Compile
+endef
+
 define Package/$(PKG_NAME)
     SECTION:=luci
     CATEGORY:=LuCI
