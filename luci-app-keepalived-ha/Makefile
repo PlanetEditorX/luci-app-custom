@@ -13,6 +13,7 @@ define Package/luci-app-keepalived-ha
     TITLE:=$(LUCI_TITLE)
     MAINTAINER:=$(LUCI_MAINTAINER)
     DEPENDS:=$(LUCI_DEPENDS)
+	VERSION:=1.0.0
 endef
 
 define Package/luci-app-keepalived-ha/install
