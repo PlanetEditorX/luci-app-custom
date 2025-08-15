@@ -4,6 +4,7 @@ PKG_NAME:=luci-app-keepalived-ha
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
+PKG_BUILD_TYPE:=none
 
 LUCI_TITLE:=LuCI Support for Keepalived HA
 LUCI_DEPENDS:=+keepalived +nftables +luci-base
