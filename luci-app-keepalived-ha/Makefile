@@ -7,12 +7,12 @@ LUCI_LICENSE:=MIT
 LUCI_MAINTAINER:=PlanetEditorX
 
 define Package/luci-app-keepalived-ha
-	SECTION:=luci
-	CATEGORY:=LuCI
-	SUBMENU:=3. Applications
-	TITLE:=LuCI Support for Keepalived HA
-	MAINTAINER:=PlanetEditorX
-	DEPENDS:=+luci-base +keepalived
+    SECTION:=luci
+    CATEGORY:=LuCI
+    SUBMENU:=3. Applications
+    TITLE:=$(LUCI_TITLE)
+    MAINTAINER:=$(LUCI_MAINTAINER)
+    DEPENDS:=$(LUCI_DEPENDS)
 endef
 
 define Package/luci-app-keepalived-ha/install
