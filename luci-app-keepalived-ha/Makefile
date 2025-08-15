@@ -1,4 +1,4 @@
-include $(TOPDIR)/include/package.mk
+include ../../include/package.mk
 
 PKG_NAME:=luci-app-keepalived-ha
 PKG_VERSION:=1.0.0
@@ -12,13 +12,13 @@ LUCI_LICENSE:=MIT
 LUCI_MAINTAINER:=PlanetEditorX
 
 define Package/$(PKG_NAME)
-    SECTION:=luci
-    CATEGORY:=LuCI
-    SUBMENU:=3. Applications
-    TITLE:=$(LUCI_TITLE)
-    MAINTAINER:=$(LUCI_MAINTAINER)
-    DEPENDS:=$(LUCI_DEPENDS)
-    VERSION:=$(PKG_VERSION)
+  SECTION:=luci
+  CATEGORY:=LuCI
+  SUBMENU:=3. Applications
+  TITLE:=$(LUCI_TITLE)
+  MAINTAINER:=$(LUCI_MAINTAINER)
+  DEPENDS:=$(LUCI_DEPENDS)
+  VERSION:=$(PKG_VERSION)
 endef
 
 define Build/Prepare
